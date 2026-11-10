@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Katalog produktów UNIC Professional — MAJOR PRO. Zamówienia przez WhatsApp.">
+  <title>MAJOR PRO | Katalog UNIC Professional</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="MAJOR PRO — strona główna">
+      <span>MAJOR <b>PRO</b></span>
+      <small data-i18n="brandline">PROFESJONALNE PRODUKTY DLA SALONÓW</small>
+    </a>
+    <div class="header-right">
+      <span class="catalog-mark">UNIC <small>PROFESSIONAL</small></span>
+      <div class="language-switch" aria-label="Wybór języka">
+        <button type="button" id="langPL" class="lang-button active" aria-pressed="true">PL</button>
+        <button type="button" id="langUK" class="lang-button" aria-pressed="false">UA</button>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div>
+      <p class="eyebrow" data-i18n="eyebrow">KATALOG PRODUKTÓW UNIC • 2026</p>
+      <h1 data-i18n="headline">Profesjonalne produkty dla fryzjerów</h1>
+      <p data-i18n="subtitle">Przeglądaj produkty, sprawdzaj opisy i wysyłaj zamówienie bezpośrednio przez WhatsApp.</p>
+    </div>
+    <div class="hero-badge"><span>2026</span><small>UNIC<br>PROFESSIONAL</small></div>
+  </section>
+
+  <main class="layout">
+    <aside class="sidebar">
+      <h2 data-i18n="categories">KATEGORIE</h2>
+      <div id="categoryList" class="category-list"></div>
+      <p class="sidebar-note" data-i18n="priceNote">Ceny nie zostały podane w załączonym PDF. Zapytaj o cenę przez WhatsApp.</p>
+    </aside>
+
+    <section class="catalog">
+      <div class="catalog-toolbar">
+        <div>
+          <h2 id="categoryTitle">Wszystkie produkty</h2>
+          <p id="productCount" class="muted"></p>
+        </div>
+        <input id="search" type="search" placeholder="Szukaj produktu lub kodu…" aria-label="Szukaj produktu">
+      </div>
+      <div id="products" class="product-grid" aria-live="polite"></div>
+    </section>
+
+    <aside class="order-panel">
+      <section class="cart-panel">
+        <h2 data-i18n="cartTitle">TWOJE ZAMÓWIENIE</h2>
+        <div id="cartItems" class="cart-items"></div>
+        <div class="cart-footer">
+          <span data-i18n="total">Suma</span>
+          <strong id="cartTotal" data-i18n="priceInquiry">Do ustalenia</strong>
+        </div>
+      </section>
+
+      <section class="customer-panel">
+        <div class="panel-heading">
+          <h2 data-i18n="customerTitle">DANE KLIENTA</h2>
+          <span id="saveStatus" class="save-status">●</span>
+        </div>
+        <form id="customerForm">
+          <label><span data-i18n="company">Nazwa firmy / salonu</span><input name="company" autocomplete="organization" required></label>
+          <label><span data-i18n="person">Imię i nazwisko</span><input name="person" autocomplete="name" required></label>
+          <label><span data-i18n="phone">Telefon</span><input name="phone" type="tel" autocomplete="tel" required></label>
+          <label><span data-i18n="email">E-mail</span><input name="email" type="email" autocomplete="email"></label>
+          <label><span data-i18n="city">Miasto</span><input name="city" autocomplete="address-level2" required></label>
+          <label><span data-i18n="postal">Kod pocztowy</span><input name="postal" autocomplete="postal-code" required></label>
+          <label><span data-i18n="address">Ulica i numer</span><input name="address" autocomplete="street-address" required></label>
+          <label><span data-i18n="notes">Uwagi do zamówienia</span><textarea name="notes" rows="2"></textarea></label>
+          <label class="save-choice"><input type="checkbox" id="rememberData" checked><span data-i18n="remember">Zapamiętaj dane na tym urządzeniu</span></label>
+          <button class="whatsapp-button" type="submit"><span>◉</span><span data-i18n="sendOrder">Zapytaj / zamów przez WhatsApp</span></button>
+          <p class="privacy-note" data-i18n="privacy">Dane są zapisywane tylko w tej przeglądarce. Zamówienie otworzy się w WhatsApp — trzeba je wysłać ręcznie.</p>
+        </form>
+      </section>
+    </aside>
+  </main>
+
+  <footer><span>MAJOR PRO</span> · UNIC PROFESSIONAL · <span data-i18n="footer">Katalog produktów 2026</span></footer>
+  <script src="script.js"></script>
+</body>
+</html>
